@@ -2,13 +2,7 @@ package com.philcode.accounts.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 @Entity
-@Getter@Setter@AllArgsConstructor@NoArgsConstructor
 public class Accounts extends BaseEntity{
     @Id
     private Long accountNumber;
@@ -16,4 +10,45 @@ public class Accounts extends BaseEntity{
     private String accountType;
     private String branchAddress;
 
+    public Accounts() {
+    }
+
+    public Accounts(Long accountNumber, Long customerId, String accountType, String branchAddress) {
+        this.accountNumber = accountNumber;
+        this.customerId = customerId;
+        this.accountType = accountType;
+        this.branchAddress = branchAddress;
+    }
+
+    public Long getAccountNumber() {
+        return accountNumber;
+    }
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public String getBranchAddress() {
+        return branchAddress;
+    }
+
+    public void setAccountNumber(Long accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
+    public void setBranchAddress(String branchAddress) {
+        this.branchAddress = branchAddress;
+    }
 }
