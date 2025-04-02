@@ -1,11 +1,16 @@
 package com.philcode.accounts.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 
-public class ResponseDTO {
+@Schema(
+        name = "Response",
+        description = "Schema to hold successful response"
+)
+public class ResponseDto {
     private String statusCode;
     private String statusMessage;
 
-    public ResponseDTO(String statusCode, String statusMessage) {
+    public ResponseDto(String statusCode, String statusMessage) {
         this.statusCode = statusCode;
         this.statusMessage = statusMessage;
     }

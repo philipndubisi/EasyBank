@@ -1,7 +1,11 @@
 package com.philcode.accounts.service;
 
-import com.philcode.accounts.dto.CustomerDTO;
+import com.philcode.accounts.dto.CustomerDto;
 
 public interface IAccountsService {
-    void createAccount(CustomerDTO customerDTO);
+    void createAccount(CustomerDto customerDTO);
+    CustomerDto fetchAccountDetails(String mobileNumber);
+    boolean updateAccountDetails(CustomerDto customerDTO);
+    boolean deleteAccountDetails(String mobileNumber);
+
 }
